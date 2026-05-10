@@ -3,121 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>בניית אתרים | G MARKETING</title>
+    <title>בניית נכסים דיגיטליים | G MARKETING</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .service-detail-hero {
-            padding: 160px 0 100px;
-            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
-        }
-        .content-section {
-            padding: 100px 0;
-        }
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .content-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-        .content-text p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-        .features-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-        .features-list li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-weight: 600;
-        }
-        .features-list i {
-            color: var(--primary);
-        }
+        .service-detail-hero { padding: 180px 0 100px; background: var(--navy-gradient); color: #fff; }
+        .content-section { padding: 120px 0; }
+        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: flex-start; }
+        .content-text h2 { font-size: 3rem; margin-bottom: 2rem; color: var(--navy); }
+        .content-text p { font-size: 1.2rem; color: var(--slate); margin-bottom: 2rem; }
+        .strategy-list { list-style: none; margin-top: 3rem; }
+        .strategy-list li { margin-bottom: 2rem; padding: 2rem; background: var(--ice-blue); border-radius: 1.5rem; border-right: 6px solid var(--sky); }
+        .strategy-list h4 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--navy); }
     </style>
 </head>
 <body>
-    <nav class="navbar scrolled">
+    <header class="navbar scrolled">
         <div class="container">
             <div class="logo-container">
-                <img src="logo.png" alt="G MARKETING Logo" class="logo-img" onerror="this.style.display='none'">
-                <a href="index.html" style="text-decoration: none;"><div class="logo-text">G MARKETING</div></a>
+                <a href="index.html" style="text-decoration: none;">
+                    <div class="logo-text">G <span>MARKETING</span></div>
+                </a>
             </div>
-            <div class="nav-links">
+            <nav class="nav-links">
                 <a href="index.html">בית</a>
                 <a href="index.html#services">שירותים</a>
-                <a href="index.html#contact" class="btn-contact-nav">דברו איתנו</a>
+                <a href="index.html#contact" class="btn-cta">בואו נדבר צמיחה</a>
             </div>
         </div>
-    </nav>
+    </header>
 
     <section class="service-detail-hero">
         <div class="container">
-            <h1 class="reveal active" style="font-size: 4rem; font-weight: 900;">בניית <span class="text-gradient">אתרים</span></h1>
-            <p class="reveal active" style="font-size: 1.5rem; color: var(--text-muted); margin-top: 1rem;">אנחנו יוצרים את הנוכחות הדיגיטלית המושלמת עבור העסק שלך.</p>
+            <div class="section-tag" style="background: rgba(255,255,255,0.1); color: #fff;">Digital Assets</div>
+            <h1 style="font-size: 4.5rem; line-height: 1.1;">בניית <span style="color: var(--sky);">נכסים דיגיטליים</span></h1>
+            <p style="font-size: 1.5rem; max-width: 700px; opacity: 0.8; margin-top: 1.5rem;">אנחנו לא רק בונים אתרים, אנחנו יוצרים פלטפורמות טכנולוגיות המהוות נכס עסקי בעל ערך שוק אמיתי.</p>
         </div>
     </section>
 
     <section class="content-section">
         <div class="container">
             <div class="content-grid">
-                <div class="content-text reveal active">
-                    <h2>האתר שלך הוא חלון הראווה הדיגיטלי שלך</h2>
-                    <p>בעולם של היום, האתר שלך הוא לעיתים קרובות המפגש הראשון של הלקוח עם המותג שלך. אנחנו ב-G MARKETING מבינים את זה ויוצרים אתרים שלא רק נראים מדהים, אלא גם מניעים לפעולה ומייצרים תוצאות.</p>
-                    <p>הצוות שלנו משלב עיצוב קריאייטיבי עם פיתוח טכנולוגי מתקדם כדי להבטיח שהאתר שלך יהיה מהיר, בטוח ונוח לשימוש בכל מכשיר.</p>
-                    <ul class="features-list">
-                        <li><i class="fa-solid fa-check"></i> עיצוב רספונסיבי מלא לכל המכשירים</li>
-                        <li><i class="fa-solid fa-check"></i> אופטימיזציה למנועי חיפוש (SEO)</li>
-                        <li><i class="fa-solid fa-check"></i> חווית משתמש (UI/UX) ברמה הגבוהה ביותר</li>
-                        <li><i class="fa-solid fa-check"></i> ניהול תוכן קל ונוח</li>
+                <div class="content-text">
+                    <h2>טכנולוגיה בשירות התוצאה העסקית</h2>
+                    <p>ב-G MARKETING, אנחנו רואים באתר שלכם הרבה יותר מ"כרטיס ביקור דיגיטלי". עבורנו, זהו כלי עבודה אסטרטגי שצריך לייצר לידים, מכירות וערך מותגי לאורך זמן.</p>
+                    <p>אנחנו משלבים ארכיטקטורת מידע מתקדמת, חווית משתמש (UX) ממוקדת המרה ופיתוח נקי ומהיר כדי להבטיח שהנכס הדיגיטלי שלכם יעבוד בשבילכם 24/7.</p>
+                    
+                    <ul class="strategy-list">
+                        <li>
+                            <h4>פלטפורמות איקומרס מתקדמות</h4>
+                            <p>בניית חנויות מקוונות המותאמות לסקייל גבוה, עם דגש על אופטימיזציה של יחס ההמרה (CRO).</p>
+                        </li>
+                        <li>
+                            <h4>מערכות Custom וניהול ידע</h4>
+                            <p>פיתוח פתרונות טכנולוגיים המותאמים אישית לצרכים האופרטיביים והעסקיים הייחודיים שלכם.</p>
+                        </li>
+                        <li>
+                            <h4>אסטרטגיית SEO ומיצוב בחיפוש</h4>
+                            <p>בניית התשתית הטכנולוגית והתוכנית שתבטיח לכם נוכחות דומיננטית במנועי החיפוש לאורך זמן.</p>
+                        </li>
                     </ul>
                 </div>
-                <div class="content-image reveal active">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2564&auto=format&fit=crop" alt="Web Development" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2564&auto=format&fit=crop" alt="Digital Asset Building" style="width: 100%; border-radius: 2rem; box-shadow: var(--shadow-bold);">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact-section">
+    <footer style="padding: 40px 0; text-align: center; color: var(--slate); border-top: 1px solid var(--border);">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>מוכנים לבנות את האתר שלכם?</h2>
-                    <p>השאירו פרטים ונחזור אליכם עם הצעה מותאמת אישית.</p>
-                    <a href="tel:0525155598" class="phone-link">052-5155598</a>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="שם מלא" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="אימייל" required>
-                        </div>
-                        <button type="submit" class="btn-submit">שליחת פרטים</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 G MARKETING. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 G MARKETING. Strategic Growth Agency. All rights reserved.</p>
         </div>
     </footer>
 </body>
