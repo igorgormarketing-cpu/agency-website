@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פיתוח עסקי ואסטרטגיה | G MARKETING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Heebo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-detail-hero { padding: 160px 0 100px; background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%); }
+        .content-section { padding: 100px 0; }
+        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .content-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary); }
+        .content-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        .features-list { list-style: none; margin-top: 2rem; }
+        .features-list li { margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; font-weight: 600; }
+        .features-list i { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="G MARKETING Logo" class="logo-img" onerror="this.style.display='none'">
+                <a href="index.html" style="text-decoration: none;"><div class="logo-text">G MARKETING</div></a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">בית</a>
+                <a href="index.html#services">שירותים</a>
+                <a href="index.html#contact" class="btn-contact-nav">דברו איתנו</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <h1 style="font-size: 4rem; font-weight: 900;"><span class="text-gradient">פיתוח עסקי</span> ואסטרטגיה</h1>
+            <p style="font-size: 1.5rem; color: var(--text-muted); margin-top: 1rem;">בונים את התשתית לצמיחה המתמדת של העסק שלכם.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div class="content-text">
+                    <h2>אסטרטגיה שמובילה לתוצאות בשטח</h2>
+                    <p>פיתוח עסקי הוא המנוע שמאחורי כל ארגון מצליח. ב-G MARKETING אנחנו מלווים עסקים בגיבוש אסטרטגיית צמיחה, איתור הזדמנויות עסקיות חדשות ושיפור המודלים העסקיים הקיימים.</p>
+                    <p>הגישה שלנו מבוססת על שילוב של מחקר שוק מעמיק, הבנת הצרכים של הלקוח וניסיון רב בליווי חברות להצלחה. אנחנו לא רק מייעצים, אנחנו שותפים לדרך שלכם.</p>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> גיבוש אסטרטגיית צמיחה שנתית</li>
+                        <li><i class="fa-solid fa-check"></i> איתור ופיתוח שיתופי פעולה אסטרטגיים</li>
+                        <li><i class="fa-solid fa-check"></i> אופטימיזציה של תהליכי מכירה ושירות</li>
+                        <li><i class="fa-solid fa-check"></i> חדירה לשווקים חדשים</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop" alt="Business Development" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>מוכנים לקחת את העסק לשלב הבא?</h2>
+                    <p>צרו איתנו קשר לפגישת ייעוץ אסטרטגי.</p>
+                    <a href="tel:0525155598" class="phone-link">052-5155598</a>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="שם מלא" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="אימייל" required>
+                        </div>
+                        <button type="submit" class="btn-submit">שליחת פרטים</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 G MARKETING. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+</body>
+</html>
