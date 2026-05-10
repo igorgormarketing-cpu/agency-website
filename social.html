@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ניהול נוכחות דיגיטלית | G MARKETING</title>
+    <title>ניהול סושיאל | G MARKETING</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Heebo:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .service-detail-hero { padding: 180px 0 100px; background: var(--navy-gradient); color: #fff; }
-        .content-section { padding: 120px 0; }
-        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: flex-start; }
-        .content-text h2 { font-size: 3rem; margin-bottom: 2rem; color: var(--navy); }
-        .content-text p { font-size: 1.2rem; color: var(--slate); margin-bottom: 2rem; }
-        .strategy-list { list-style: none; margin-top: 3rem; }
-        .strategy-list li { margin-bottom: 2rem; padding: 2rem; background: var(--ice-blue); border-radius: 1.5rem; border-right: 6px solid var(--sky); }
-        .strategy-list h4 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--navy); }
+        .service-detail-hero { padding: 180px 0 100px; background: var(--navy); color: #fff; position: relative; }
+        .service-detail-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 50px; background: #fff; clip-path: polygon(0 100%, 100% 100%, 100% 0); }
+        .content-section { padding: 100px 0; }
+        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .content-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--navy); }
+        .content-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
     </style>
 </head>
 <body>
-    <header class="navbar scrolled">
+    <header class="navbar">
         <div class="container">
             <div class="logo-container">
                 <a href="index.html" style="text-decoration: none;">
@@ -31,16 +29,15 @@
             <nav class="nav-links">
                 <a href="index.html">בית</a>
                 <a href="index.html#services">שירותים</a>
-                <a href="index.html#contact" class="btn-cta">בואו נדבר צמיחה</a>
+                <a href="index.html#contact" class="btn-cta-nav">צרו קשר</a>
             </div>
         </div>
     </header>
 
     <section class="service-detail-hero">
         <div class="container">
-            <div class="section-tag" style="background: rgba(255,255,255,0.1); color: #fff;">Digital Narrative</div>
-            <h1 style="font-size: 4.5rem; line-height: 1.1;">ניהול <span style="color: var(--sky);">נוכחות דיגיטלית</span></h1>
-            <p style="font-size: 1.5rem; max-width: 700px; opacity: 0.8; margin-top: 1.5rem;">אנחנו בונים עבורכם נרטיב מותגי שיוצר אמון, קהילה וערך עסקי ארוך טווח.</p>
+            <h1 style="font-size: 4rem; font-weight: 900;">ניהול <span style="color: var(--magenta);">נוכחות דיגיטלית</span></h1>
+            <p style="font-size: 1.5rem; opacity: 0.8; margin-top: 1rem;">בניית קהילה ונרטיב מותגי שיוצר אמון וערך עסקי.</p>
         </div>
     </section>
 
@@ -48,35 +45,20 @@
         <div class="container">
             <div class="content-grid">
                 <div class="content-text">
-                    <h2>להיות נוכח זה לא מספיק. צריך להוביל.</h2>
-                    <p>ניהול רשתות חברתיות ב-G MARKETING הוא לא רק "להעלות פוסטים". זוהי אסטרטגיית תוכן מקיפה שנועדה לחזק את המיצוב שלכם בשוק ולייצר קשר בלתי אמצעי עם קהל היעד.</p>
-                    <p>אנחנו משלבים קריאייטיב נועז עם ניתוח נתונים קפדני כדי להבטיח שכל פיסת תוכן משרתת את המטרה העסקית הגדולה יותר.</p>
-                    
-                    <ul class="strategy-list">
-                        <li>
-                            <h4>ניהול מוניטין ונרטיב מותגי</h4>
-                            <p>בניית הקול הייחודי של המותג שלכם וניהול השיח סביבו ברשתות החברתיות ובדיגיטל.</p>
-                        </li>
-                        <li>
-                            <h4>שיווק משפיענים וקהילות</h4>
-                            <p>חיבור המותג שלכם למשפיענים ומובילי דעת קהל שיוצרים חשיפה איכותית ואמינות.</p>
-                        </li>
-                        <li>
-                            <h4>ניהול קמפיינים וביצועים (Performance)</h4>
-                            <p>אופטימיזציה מתמדת של המדיה הממומנת כדי להשיג את המטרות העסקיות בעלות הנמוכה ביותר.</p>
-                        </li>
-                    </ul>
+                    <h2>להוביל את השיח</h2>
+                    <p>אנחנו בונים עבורכם אסטרטגיית תוכן מקיפה שנועדה לחזק את המיצוב שלכם בשוק ולייצר קשר ישיר עם קהל היעד.</p>
+                    <p>אנחנו משלבים קריאייטיב נועז עם ניתוח נתונים כדי להבטיח שכל פיסת תוכן משרתת את המטרה העסקית הגדולה יותר.</p>
                 </div>
-                <div class="content-image">
-                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2548&auto=format&fit=crop" alt="Social Narrative Strategy" style="width: 100%; border-radius: 2rem; box-shadow: var(--shadow-bold);">
+                <div class="hero-image-slanted">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2548&auto=format&fit=crop" alt="Social Media Strategy">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 40px 0; text-align: center; color: var(--slate); border-top: 1px solid var(--border);">
+    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid var(--border);">
         <div class="container">
-            <p>&copy; 2024 G MARKETING. Strategic Growth Agency. All rights reserved.</p>
+            <p>&copy; 2024 G MARKETING. כל הזכויות שמורות.</p>
         </div>
     </footer>
 </body>
