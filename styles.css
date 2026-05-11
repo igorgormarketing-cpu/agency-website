@@ -20,7 +20,7 @@
 }
 
 html {
-    font-size: 14px; /* Reduced base font size */
+    font-size: 14px;
 }
 
 body {
@@ -46,7 +46,7 @@ body {
 .mesh-blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px); /* Reduced blur */
+    filter: blur(80px);
     opacity: 0.2;
     animation: blob-move 25s infinite alternate;
 }
@@ -61,14 +61,14 @@ body {
 }
 
 .container {
-    max-width: 900px; /* Reduced from 1200px (approx -25%) */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 1.4rem;
 }
 
 /* Header */
 .navbar {
-    height: 60px; /* Reduced from 80px */
+    height: 60px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -89,7 +89,7 @@ body {
 }
 
 .logo-text {
-    font-size: 1.2rem; /* Reduced from 1.5rem */
+    font-size: 1.2rem;
     font-weight: 800;
     letter-spacing: -1px;
 }
@@ -100,7 +100,7 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 1.8rem; /* Reduced from 2.5rem */
+    gap: 1.8rem;
     align-items: center;
 }
 
@@ -108,7 +108,7 @@ body {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 600;
-    font-size: 0.85rem; /* Reduced */
+    font-size: 0.85rem;
     opacity: 0.6;
     transition: all 0.3s;
 }
@@ -116,7 +116,7 @@ body {
 .btn-nav {
     background: #fff;
     color: var(--bg-base) !important;
-    padding: 0.5rem 1rem; /* Reduced */
+    padding: 0.5rem 1rem;
     border-radius: 10px;
     opacity: 1 !important;
     font-weight: 800;
@@ -124,7 +124,7 @@ body {
 
 /* Hero Section */
 .hero {
-    min-height: 85vh; /* Slightly reduced */
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -134,7 +134,7 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.2rem); /* Reduced from 3.5-6rem */
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
     font-weight: 900;
     line-height: 0.95;
     letter-spacing: -3px;
@@ -147,7 +147,7 @@ body {
 }
 
 .hero p {
-    font-size: 1rem; /* Reduced from 1.25rem */
+    font-size: 1rem;
     color: var(--text-muted);
     max-width: 500px;
     margin-bottom: 2.5rem;
@@ -155,7 +155,7 @@ body {
 
 .chat-cta {
     width: 100%;
-    max-width: 550px; /* Reduced from 750px */
+    max-width: 550px;
     background: var(--bg-light);
     padding: 8px;
     border-radius: 18px;
@@ -194,7 +194,7 @@ body {
 }
 
 .section-header h2 {
-    font-size: 2.5rem; /* Reduced from 3.5rem */
+    font-size: 2.5rem;
     font-weight: 900;
     letter-spacing: -1.5px;
 }
@@ -202,8 +202,8 @@ body {
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 190px; /* Reduced from 260px */
-    gap: 1.1rem; /* Reduced from 1.5rem */
+    grid-auto-rows: 190px;
+    gap: 1.1rem;
 }
 
 .bento-item {
@@ -211,14 +211,14 @@ body {
     backdrop-filter: blur(14px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 2.1rem; /* Reduced from 3rem */
+    padding: 2.1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .bento-item h3 {
-    font-size: 1.3rem; /* Reduced from 1.8rem */
+    font-size: 1.3rem;
     font-weight: 800;
     margin-bottom: 0.7rem;
 }
@@ -229,17 +229,70 @@ body {
 }
 
 .bento-icon {
-    font-size: 1.6rem; /* Reduced from 2.2rem */
+    font-size: 1.6rem;
     margin-bottom: 1.4rem;
     color: var(--primary);
 }
 
-/* Review Cards */
+/* Carousel for Reviews */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 1.5rem;
+}
+
+.carousel-item {
+    min-width: calc(100% / 2 - 0.75rem); /* Default: 2 items on screen */
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 100%;
+    }
+}
+
 .review-card {
     background: var(--bg-light);
     padding: 1.8rem;
     border-radius: 18px;
     border: 1px solid var(--glass-border);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stars {
+    color: #fbbc04;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.author {
+    margin-top: 1.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* WhatsApp */
@@ -247,7 +300,7 @@ body {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    width: 50px; /* Reduced from 70px */
+    width: 50px;
     height: 50px;
     background: var(--primary);
     color: #fff;
