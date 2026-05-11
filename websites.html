@@ -6,64 +6,65 @@
     <title>בניית נכסים דיגיטליים | G MARKETING</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&family=Heebo:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .service-detail-hero { padding: 180px 0 100px; background: var(--navy); color: #fff; position: relative; }
-        .service-detail-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 50px; background: #fff; clip-path: polygon(0 100%, 100% 100%, 100% 0); }
+        .service-hero { padding: 180px 0 100px; text-align: center; }
+        .service-hero h1 { font-size: 4.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 1.5rem; }
         .content-section { padding: 100px 0; }
-        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .content-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--navy); }
-        .content-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        .content-card { background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 32px; padding: 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     </style>
 </head>
 <body>
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+    </div>
+
     <header class="navbar">
         <div class="container">
             <div class="logo-container">
-                <a href="index.html" style="text-decoration: none;">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
                     <div class="logo-text">G <span>MARKETING</span></div>
                 </a>
             </div>
             <nav class="nav-links">
                 <a href="index.html">בית</a>
                 <a href="index.html#services">שירותים</a>
-                <a href="index.html#reviews">המלצות</a>
-                <a href="index.html#contact" class="btn-cta-nav">צרו קשר</a>
+                <a href="index.html#contact" class="btn-nav">דברו איתנו</a>
             </nav>
         </div>
     </header>
 
-    <section class="service-detail-hero">
-        <div class="container">
-            <h1 style="font-size: 4rem; font-weight: 900;">בניית <span style="color: var(--magenta);">נכסים דיגיטליים</span></h1>
-            <p style="font-size: 1.5rem; opacity: 0.8; margin-top: 1rem;">אנחנו בונים פלטפורמות טכנולוגיות המהוות נכס עסקי מניב.</p>
-        </div>
-    </section>
+    <main class="container">
+        <section class="service-hero">
+            <h1 class="reveal">בניית <span style="background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">נכסים דיגיטליים</span></h1>
+            <p class="reveal" style="font-size: 1.5rem; color: var(--text-muted);">מפתחים את העתיד הטכנולוגי של העסק שלך.</p>
+        </section>
 
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2>טכנולוגיה בשירות התוצאה</h2>
-                    <p>ב-G MARKETING אנחנו רואים באתר שלכם הרבה יותר מ"כרטיס ביקור". עבורנו, זהו כלי עבודה אסטרטגי שצריך לייצר ערך עסקי אמיתי.</p>
-                    <p>אנחנו משלבים עיצוב חכם, חווית משתמש ממוקדת המרה ופיתוח נקי כדי להבטיח שהנכס הדיגיטלי שלכם יעבוד בשבילכם 24/7.</p>
+        <section class="content-section reveal">
+            <div class="content-card">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">טכנולוגיה בשירות הצמיחה</h2>
+                    <p style="margin-bottom: 1.5rem;">אנחנו לא רק בונים אתרים, אנחנו יוצרים פלטפורמות המהוות נכס עסקי אמיתי. כל פרויקט שלנו מתחיל באסטרטגיה עסקית וממשיך לביצוע טכנולוגי מושלם.</p>
+                    <ul style="list-style: none; display: grid; gap: 1rem; font-weight: 600;">
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> חווית משתמש (UX) ממוקדת המרה</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> פיתוח מהיר, נקי ומאובטח</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> אופטימיזציה מלאה למנועי חיפוש</li>
+                    </ul>
                 </div>
-                <div class="hero-image-slanted">
-                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=2564&auto=format&fit=crop" alt="Web Development">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft);">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer style="padding: 40px 0; text-align: center; border-top: 1px solid var(--border);">
-        <div class="container">
-            <p>&copy; 2024 G MARKETING. כל הזכויות שמורות.</p>
-        </div>
-    </footer>
     <a href="https://wa.me/972525155598" class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
