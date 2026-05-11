@@ -27,10 +27,10 @@ if (track) {
         index++;
         
         // Loop back to start if at the end
-        // visibleItems: 6 for desktop, 4 for tablet, 1 for mobile
-        let visibleItems = 6;
+        // visibleItems: 5 for desktop, 3 for tablet, 1 for mobile
+        let visibleItems = 5;
         if (window.innerWidth <= 768) visibleItems = 1;
-        else if (window.innerWidth <= 1200) visibleItems = 4;
+        else if (window.innerWidth <= 1200) visibleItems = 3;
 
         if (index > slides.length - visibleItems) {
             index = 0;
