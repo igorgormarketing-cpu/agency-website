@@ -16,19 +16,22 @@ function reveal() {
 window.addEventListener('scroll', reveal);
 reveal(); // Run once on load
 
-// Reviews Carousel Logic
+// Reviews Carousel Logic - Updated for 6 items
 const track = document.getElementById('review-carousel');
 if (track) {
     const slides = Array.from(track.children);
     let index = 0;
 
     function moveCarousel() {
-        const slideWidth = slides[0].getBoundingClientRect().width + 21; // width + gap
+        const slideWidth = slides[0].getBoundingClientRect().width + 14; // width + gap (1rem approx 14px in our scale)
         index++;
         
         // Loop back to start if at the end
-        // Adjust limit based on how many items are visible
-        const visibleItems = window.innerWidth > 768 ? 2 : 1;
+        // visibleItems: 6 for desktop, 4 for tablet, 1 for mobile
+        let visibleItems = 6;
+        if (window.innerWidth <= 768) visibleItems = 1;
+        else if (window.innerWidth <= 1200) visibleItems = 4;
+
         if (index > slides.length - visibleItems) {
             index = 0;
         }
@@ -48,10 +51,8 @@ if (chatBtn && chatInput) {
     chatBtn.addEventListener('click', () => {
         const val = chatInput.value;
         if (val) {
-            // Redirect to WhatsApp with the message
             window.location.href = `https://wa.me/972525155598?text=${encodeURIComponent('היי, אשמח לקבל פרטים נוספים לגבי: ' + val)}`;
         } else {
-            // Smooth scroll to contact
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
     });
