@@ -1,14 +1,16 @@
 :root {
-    --bg-base: #fcfcfd;
-    --text-main: #0a0a0b;
-    --text-muted: #52525b;
-    --primary: #9d00ff;
-    --secondary: #ff3bff;
-    --accent: #00d1ff;
-    --glass: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(0, 0, 0, 0.05);
+    --bg-base: #09090b; /* Dark Gray / Black */
+    --bg-light: #18181b; /* Dark Gray Lighter */
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa; /* Light Gray Text */
+    --primary: #22c55e; /* Green */
+    --primary-hover: #16a34a;
+    --secondary: #3f3f46; /* Medium Gray */
+    --accent: #52525b; /* Gray Accent */
+    --glass: rgba(24, 24, 27, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
     --font-main: 'Inter', 'Heebo', sans-serif;
-    --shadow-soft: 0 8px 30px rgba(0,0,0,0.04);
+    --shadow-soft: 0 8px 30px rgba(0,0,0,0.5);
 }
 
 * {
@@ -26,7 +28,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Mesh Background Effects */
+/* Mesh Background Effects - Dark Mode with Green Blurs */
 .mesh-bg {
     position: fixed;
     top: 0;
@@ -41,18 +43,18 @@ body {
 .mesh-blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.15;
-    animation: blob-move 20s infinite alternate;
+    filter: blur(120px);
+    opacity: 0.2;
+    animation: blob-move 25s infinite alternate;
 }
 
-.blob-1 { width: 600px; height: 600px; background: var(--primary); top: -100px; right: -100px; }
-.blob-2 { width: 500px; height: 500px; background: var(--secondary); bottom: -100px; left: -100px; animation-delay: -5s; }
-.blob-3 { width: 400px; height: 400px; background: var(--accent); top: 30%; left: 20%; animation-delay: -10s; }
+.blob-1 { width: 700px; height: 700px; background: var(--primary); top: -200px; right: -100px; opacity: 0.15; }
+.blob-2 { width: 600px; height: 600px; background: var(--secondary); bottom: -100px; left: -100px; animation-delay: -5s; }
+.blob-3 { width: 500px; height: 500px; background: #14532d; top: 30%; left: 10%; animation-delay: -10s; }
 
 @keyframes blob-move {
     0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(100px, 50px) scale(1.1); }
+    100% { transform: translate(150px, 100px) scale(1.1); }
 }
 
 .container {
@@ -71,8 +73,8 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(16px);
+    background: rgba(9, 9, 11, 0.7);
+    backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -90,9 +92,7 @@ body {
 }
 
 .logo-text span {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--primary);
 }
 
 .nav-links {
@@ -106,159 +106,171 @@ body {
     color: var(--text-main);
     font-weight: 600;
     font-size: 0.9rem;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+    opacity: 0.6;
+    transition: all 0.3s;
 }
 
-.nav-links a:hover { opacity: 1; }
+.nav-links a:hover { opacity: 1; color: var(--primary); }
 
 .btn-nav {
-    background: var(--text-main);
-    color: #fff !important;
-    padding: 0.6rem 1.2rem;
+    background: var(--white);
+    color: var(--bg-base) !important;
+    padding: 0.7rem 1.4rem;
     border-radius: 12px;
     opacity: 1 !important;
+    font-weight: 800;
 }
+
+.btn-nav:hover { background: var(--primary); }
 
 /* Hero Section */
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 .hero h1 {
-    font-size: clamp(3.5rem, 8vw, 5.5rem);
+    font-size: clamp(3.5rem, 8vw, 6rem);
     font-weight: 900;
-    line-height: 1;
-    letter-spacing: -3px;
-    margin-bottom: 1.5rem;
-    max-width: 900px;
+    line-height: 0.95;
+    letter-spacing: -4px;
+    margin-bottom: 2rem;
+    max-width: 1000px;
+}
+
+.hero h1 span {
+    color: var(--primary);
 }
 
 .hero p {
     font-size: 1.25rem;
     color: var(--text-muted);
-    max-width: 600px;
-    margin-bottom: 3rem;
+    max-width: 650px;
+    margin-bottom: 3.5rem;
 }
 
 .chat-cta {
     width: 100%;
-    max-width: 700px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    max-width: 750px;
+    background: var(--bg-light);
+    padding: 12px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     border: 1px solid var(--glass-border);
     display: flex;
-    gap: 10px;
-    margin-bottom: 2rem;
+    gap: 12px;
+    margin-bottom: 2.5rem;
 }
 
 .chat-cta input {
     flex: 1;
+    background: transparent;
     border: none;
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
+    color: #fff;
     outline: none;
     font-family: inherit;
 }
 
+.chat-cta input::placeholder { color: var(--text-muted); }
+
 .btn-chat {
-    background: var(--text-main);
+    background: var(--primary);
     color: #fff;
     border: none;
-    padding: 0 1.8rem;
-    border-radius: 14px;
-    font-weight: 700;
+    padding: 0 2rem;
+    border-radius: 16px;
+    font-weight: 800;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.2s;
 }
 
-.btn-chat:hover { transform: scale(1.02); }
+.btn-chat:hover { 
+    background: var(--primary-hover);
+    transform: scale(1.02); 
+}
 
 /* Bento Grid */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .section-header h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: -1.5px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
 }
 
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 240px;
+    grid-auto-rows: 260px;
     gap: 1.5rem;
 }
 
 .bento-item {
     background: var(--glass);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    padding: 2.5rem;
-    transition: all 0.3s;
+    border-radius: 28px;
+    padding: 3rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .bento-item:hover {
-    transform: translateY(-5px);
-    background: #fff;
-    box-shadow: var-shadow-soft;
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary);
+    background: rgba(34, 197, 94, 0.05);
 }
 
 .bento-item.wide { grid-column: span 2; }
 .bento-item.tall { grid-row: span 2; }
 
 .bento-item h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 800;
     margin-bottom: 1rem;
 }
 
 .bento-item p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
 }
 
 .bento-icon {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
     color: var(--primary);
 }
 
 /* Review Cards */
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 4rem;
+.review-card {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s;
 }
 
-.review-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 20px;
-    border: 1px solid var(--glass-border);
+.review-card:hover {
+    border-color: var(--primary);
 }
 
 /* Animations */
 .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .reveal.active {
@@ -266,39 +278,33 @@ body {
     transform: translateY(0);
 }
 
-/* Footer & Contact */
-.footer-cta {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.footer-cta h2 {
-    font-size: 4rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-    margin-bottom: 2rem;
-}
-
-/* WhatsApp */
+/* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: #000;
+    bottom: 40px;
+    right: 40px;
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
     color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: 1000;
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(34, 197, 94, 0.4);
+    transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(10deg);
 }
 
 @media (max-width: 992px) {
     .bento-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero h1 { font-size: 3rem; }
+    .hero h1 { font-size: 3.5rem; }
+    .chat-cta { flex-direction: column; padding: 15px; }
+    .btn-chat { padding: 1.2rem; }
 }
